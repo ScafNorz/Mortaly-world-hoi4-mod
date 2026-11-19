@@ -1,0 +1,25 @@
+state = {
+	id = 190
+	name = "STATE_190"
+	manpower = 4000
+	state_category = rural
+	resources = {
+		oil = 18
+		chromium = 28
+	}
+	history = {
+		owner = CRL
+		add_core_of = CRL
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		victory_points = {
+			190 1
+		}
+	}
+	provinces = {
+		190
+	}
+	buildings_max_level_factor = 1.0
+}

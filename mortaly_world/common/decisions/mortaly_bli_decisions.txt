@@ -1,0 +1,64 @@
+BLI_support_the_north = {
+	BLI_supply_volunteer_arms = {
+		icon = generic_military
+		cost = 25
+		available = {
+			country_exists = PCL
+has_global_flag = civil_war_started
+		}
+		days_re_enable = 90
+		complete_effect = {
+			PCL = { add_equipment_to_stockpile = { type = infantry_equipment amount = 200 } }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	BLI_send_volunteer_division = {
+		icon = generic_military
+		cost = 75
+		available = {
+			country_exists = PCL
+has_global_flag = civil_war_started
+		}
+		fire_only_once = yes
+		complete_effect = {
+			mortaly_spawn_bli_volunteers = yes
+			set_country_flag = BLI_division_sent
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	BLI_open_the_harbours = {
+		icon = generic_construction
+		cost = 25
+		available = {
+			country_exists = PCL
+has_global_flag = civil_war_started
+		}
+		days_re_enable = 150
+		complete_effect = {
+			PCL = { add_timed_idea = { idea = BLI_open_harbours days = 120 } }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	BLI_sea_convoy = {
+		icon = generic_naval
+		cost = 50
+		available = {
+			country_exists = PCL
+has_global_flag = civil_war_started
+		}
+		days_re_enable = 120
+		complete_effect = {
+			PCL = { add_equipment_to_stockpile = { type = infantry_equipment amount = 150 } }
+			add_timed_idea = { idea = BLI_convoy_effort days = 90 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

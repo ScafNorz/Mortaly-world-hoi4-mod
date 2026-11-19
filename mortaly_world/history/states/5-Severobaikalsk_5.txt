@@ -1,0 +1,22 @@
+state = {
+	id = 5
+	name = "STATE_5"
+	manpower = 56000
+	state_category = city
+	history = {
+		owner = SVB
+		add_core_of = SVB
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 1
+		}
+		victory_points = {
+			5 5
+		}
+	}
+	provinces = {
+		5
+	}
+	buildings_max_level_factor = 1.0
+}

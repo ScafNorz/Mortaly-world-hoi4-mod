@@ -1,0 +1,143 @@
+ideas = {
+	country = {
+		PCL_civil_rights = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+			}
+		}
+		PCL_northern_admin = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.03
+				political_power_gain = 0.05
+			}
+		}
+		PCL_people_army_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				army_infantry_attack_factor = 0.08
+				army_infantry_defence_factor = 0.08
+			}
+		}
+		PCL_field_command_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				army_morale_factor = 0.05
+				planning_speed = 0.10
+			}
+		}
+		PCL_northern_defence = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				max_dig_in_factor = 0.15
+				army_defence_factor = 0.05
+			}
+		}
+		PCL_supply_corridor_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				land_reinforce_rate = 0.05
+			}
+		}
+		PCL_civilian_control_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.10
+			}
+		}
+		PCL_amnesty_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.03
+				war_support_factor = 0.02
+			}
+		}
+		BLI_coastal_guard_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				army_defence_factor = 0.05
+				max_dig_in_factor = 0.10
+			}
+		}
+		BLI_island_militia_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				army_infantry_defence_factor = 0.05
+				conscription_factor = 0.05
+			}
+		}
+		BLI_trade_routes_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.05
+				political_power_gain = 0.10
+			}
+		}
+		BLI_island_defence_2 = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				army_defence_factor = 0.25
+				max_dig_in_factor = 0.25
+			}
+		}
+		BLI_open_harbours = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				land_reinforce_rate = 0.05
+			}
+		}
+		BLI_army_foundation_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				army_infantry_attack_factor = 0.05
+				training_time_factor = -0.10
+			}
+		}
+		BLI_air_squadrons_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				air_attack_factor = 0.05
+				air_superiority_efficiency = 0.05
+			}
+		}
+		BLI_navy_foundation_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				naval_speed_factor = 0.05
+			}
+		}
+		BLI_navy_fleet_spirit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				convoy_escort_efficiency = 0.10
+			}
+		}
+		BLI_recognition = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.10
+			}
+		}
+	}
+}

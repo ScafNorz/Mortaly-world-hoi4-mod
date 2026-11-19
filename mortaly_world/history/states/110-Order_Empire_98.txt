@@ -1,0 +1,17 @@
+state = {
+	id = 110
+	name = "STATE_110"
+	manpower = 7000
+	state_category = rural
+	history = {
+		owner = ORD
+		add_core_of = ORD
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = {
+		110
+	}
+	buildings_max_level_factor = 1.0
+}

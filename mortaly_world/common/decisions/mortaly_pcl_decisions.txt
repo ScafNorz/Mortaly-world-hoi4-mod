@@ -1,0 +1,50 @@
+PCL_provisional_gov_cat = {
+	PCL_urgent_mobilisation = {
+		icon = generic_military
+		cost = 50
+		days_re_enable = 120
+		complete_effect = {
+			add_manpower = 6000
+			add_equipment_to_stockpile = { type = infantry_equipment amount = 300 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	PCL_requisition_depots = {
+		icon = generic_military
+		cost = 40
+		available = {
+			controls_state = 169
+		}
+		fire_only_once = yes
+		complete_effect = {
+			add_equipment_to_stockpile = { type = infantry_equipment amount = 600 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	PCL_field_hospitals = {
+		icon = generic_political_actions
+		cost = 35
+		days_re_enable = 180
+		complete_effect = {
+			add_timed_idea = { idea = PCL_field_hospitals_idea days = 120 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	PCL_protect_rail_hub = {
+		icon = generic_construction
+		cost = 35
+		days_re_enable = 180
+		complete_effect = {
+			add_timed_idea = { idea = PCL_rail_hub days = 120 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

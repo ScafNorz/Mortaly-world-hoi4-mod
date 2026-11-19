@@ -1,0 +1,21 @@
+state = {
+	id = 284
+	name = "STATE_284"
+	manpower = 10000
+	state_category = rural
+	history = {
+		owner = OVS
+		add_core_of = OVS
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		victory_points = {
+			284 1
+		}
+	}
+	provinces = {
+		284
+	}
+	buildings_max_level_factor = 1.0
+}

@@ -1,0 +1,164 @@
+# Появление дивизий через create_unit (генератор: tools/make_spawn.py)
+
+mortaly_spawn_pcl_base = {
+	PCL = {
+		division_template = {
+			name = "PCL Peoples Infantry"
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+				infantry = { x = 2 y = 0 }
+				infantry = { x = 2 y = 1 }
+				infantry = { x = 2 y = 2 }
+			}
+		}
+	}
+	242 = {
+		create_unit = {
+			division = "name = \"Peoples Division\" division_template = \"PCL Peoples Infantry\" start_experience_factor = 0.2 start_equipment_factor = 0.8"
+			owner = PCL
+			count = 7
+			allow_spawning_on_enemy_provs = yes
+		}
+	}
+}
+
+mortaly_spawn_pcl_defectors = {
+	PCL = {
+		division_template = {
+			name = "PCL Defectors"
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+				infantry = { x = 2 y = 0 }
+				infantry = { x = 2 y = 1 }
+				infantry = { x = 2 y = 2 }
+			}
+		}
+	}
+	242 = {
+		create_unit = {
+			division = "name = \"Defector Division\" division_template = \"PCL Defectors\" start_experience_factor = 0.5 start_equipment_factor = 0.9"
+			owner = PCL
+			count = 2
+			allow_spawning_on_enemy_provs = yes
+		}
+	}
+}
+
+mortaly_spawn_pcl_rebels = {
+	PCL = {
+		division_template = {
+			name = "PCL Rebels"
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+				infantry = { x = 2 y = 0 }
+				infantry = { x = 2 y = 1 }
+				infantry = { x = 2 y = 2 }
+			}
+		}
+	}
+	242 = {
+		create_unit = {
+			division = "name = \"Rebel Division\" division_template = \"PCL Rebels\" start_experience_factor = 0.1 start_equipment_factor = 0.6"
+			owner = PCL
+			count = 2
+			allow_spawning_on_enemy_provs = yes
+		}
+	}
+}
+
+mortaly_spawn_crl_army = {
+	CRL = {
+		division_template = {
+			name = "CRL Palace Infantry"
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+				infantry = { x = 2 y = 0 }
+				infantry = { x = 2 y = 1 }
+				infantry = { x = 2 y = 2 }
+			}
+		}
+	}
+	210 = {
+		create_unit = {
+			division = "name = \"Palace Division\" division_template = \"CRL Palace Infantry\" start_experience_factor = 0.3 start_equipment_factor = 0.85"
+			owner = CRL
+			count = 10
+			allow_spawning_on_enemy_provs = yes
+		}
+	}
+}
+
+mortaly_spawn_crl_guard = {
+	CRL = {
+		division_template = {
+			name = "CRL Guard"
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+				infantry = { x = 2 y = 0 }
+				infantry = { x = 2 y = 1 }
+				infantry = { x = 2 y = 2 }
+			}
+		}
+	}
+	210 = {
+		create_unit = {
+			division = "name = \"Guard Division\" division_template = \"CRL Guard\" start_experience_factor = 0.5 start_equipment_factor = 0.9"
+			owner = CRL
+			count = 2
+			allow_spawning_on_enemy_provs = yes
+		}
+	}
+}
+
+mortaly_spawn_bli_volunteers = {
+	PCL = {
+		division_template = {
+			name = "BLI Volunteers"
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+				infantry = { x = 2 y = 0 }
+				infantry = { x = 2 y = 1 }
+				infantry = { x = 2 y = 2 }
+			}
+		}
+	}
+	242 = {
+		create_unit = {
+			division = "name = \"Island Volunteers\" division_template = \"BLI Volunteers\" start_experience_factor = 0.3 start_equipment_factor = 0.7"
+			owner = PCL
+			count = 1
+			allow_spawning_on_enemy_provs = yes
+		}
+	}
+}
+

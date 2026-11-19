@@ -1,0 +1,22 @@
+state = {
+	id = 69
+	name = "STATE_69"
+	manpower = 7000
+	state_category = city
+	history = {
+		owner = ORD
+		add_core_of = ORD
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 1
+		}
+		victory_points = {
+			69 5
+		}
+	}
+	provinces = {
+		69
+	}
+	buildings_max_level_factor = 1.0
+}

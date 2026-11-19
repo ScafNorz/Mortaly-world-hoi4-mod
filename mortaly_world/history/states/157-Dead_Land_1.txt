@@ -1,0 +1,17 @@
+state = {
+	id = 157
+	name = "STATE_157"
+	manpower = 15000
+	state_category = rural
+	history = {
+		owner = DLD
+		add_core_of = DLD
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = {
+		157
+	}
+	buildings_max_level_factor = 1.0
+}

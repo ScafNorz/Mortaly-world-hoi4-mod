@@ -1,0 +1,17 @@
+state = {
+	id = 555
+	name = "STATE_555"
+	manpower = 2000
+	state_category = rural
+	history = {
+		owner = VMP
+		add_core_of = VMP
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = {
+		555
+	}
+	buildings_max_level_factor = 1.0
+}

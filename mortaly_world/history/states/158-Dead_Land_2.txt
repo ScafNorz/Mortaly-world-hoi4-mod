@@ -1,0 +1,21 @@
+state = {
+	id = 158
+	name = "STATE_158"
+	manpower = 15000
+	state_category = rural
+	history = {
+		owner = DLD
+		add_core_of = DLD
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		victory_points = {
+			158 1
+		}
+	}
+	provinces = {
+		158
+	}
+	buildings_max_level_factor = 1.0
+}

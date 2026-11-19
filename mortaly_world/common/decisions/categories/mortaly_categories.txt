@@ -1,0 +1,18 @@
+CRL_economic_recovery = {
+	icon = generic_industry
+	allowed = { original_tag = CRL }
+	visible = { NOT = { has_global_flag = civil_war_started } }
+}
+CRL_prepare_for_split = {
+	icon = generic_military
+	allowed = { original_tag = CRL }
+	visible = { NOT = { has_global_flag = civil_war_started } }
+}
+PCL_provisional_gov_cat = {
+	icon = generic_political_actions
+	allowed = { original_tag = PCL }
+}
+BLI_support_the_north = {
+	icon = generic_prepare_civil_war
+	allowed = { original_tag = BLI }
+}

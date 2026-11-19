@@ -1,0 +1,48 @@
+YOZ = {
+	color = rgb { 205 122 38 }
+	color_ui = rgb { 245 150 53 }
+}
+VMP = {
+	color = rgb { 237 13 24 }
+	color_ui = rgb { 255 24 37 }
+}
+WWF = {
+	color = rgb { 187 149 202 }
+	color_ui = rgb { 225 181 242 }
+}
+CRL = {
+	color = rgb { 151 17 47 }
+	color_ui = rgb { 183 29 64 }
+}
+PCL = {
+	color = rgb { 120 220 120 }
+	color_ui = rgb { 148 255 148 }
+}
+BLI = {
+	color = rgb { 67 224 245 }
+	color_ui = rgb { 87 255 255 }
+}
+ORD = {
+	color = rgb { 245 245 245 }
+	color_ui = rgb { 255 255 255 }
+}
+FOX = {
+	color = rgb { 245 145 0 }
+	color_ui = rgb { 255 176 10 }
+}
+HMS = {
+	color = rgb { 98 98 98 }
+	color_ui = rgb { 122 122 122 }
+}
+SVB = {
+	color = rgb { 172 166 241 }
+	color_ui = rgb { 207 200 255 }
+}
+DLD = {
+	color = rgb { 43 104 67 }
+	color_ui = rgb { 59 129 87 }
+}
+OVS = {
+	color = rgb { 66 35 89 }
+	color_ui = rgb { 85 50 112 }
+}

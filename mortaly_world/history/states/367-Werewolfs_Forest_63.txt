@@ -1,0 +1,22 @@
+state = {
+	id = 367
+	name = "STATE_367"
+	manpower = 3000
+	state_category = city
+	history = {
+		owner = WWF
+		add_core_of = WWF
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 1
+		}
+		victory_points = {
+			367 5
+		}
+	}
+	provinces = {
+		367
+	}
+	buildings_max_level_factor = 1.0
+}

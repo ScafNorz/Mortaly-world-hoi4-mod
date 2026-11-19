@@ -1,0 +1,22 @@
+state = {
+	id = 167
+	name = "STATE_167"
+	manpower = 13000
+	state_category = city
+	history = {
+		owner = DLD
+		add_core_of = DLD
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 1
+		}
+		victory_points = {
+			167 5
+		}
+	}
+	provinces = {
+		167
+	}
+	buildings_max_level_factor = 1.0
+}

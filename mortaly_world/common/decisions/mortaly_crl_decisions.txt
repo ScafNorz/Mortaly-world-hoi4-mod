@@ -1,0 +1,190 @@
+CRL_economic_recovery = {
+	CRL_check_state_enterprises = {
+		icon = generic_industry
+		cost = 25
+		days_re_enable = 120
+		complete_effect = {
+			add_timed_idea = { idea = CRL_enterprise_audit days = 180 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	CRL_launch_the_mines = {
+		icon = generic_industry
+		cost = 50
+		days_re_enable = 180
+		complete_effect = {
+			add_timed_idea = { idea = CRL_mines_running days = 120 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	CRL_restore_workshops = {
+		icon = generic_industry
+		cost = 50
+		days_re_enable = 180
+		complete_effect = {
+			add_timed_idea = { idea = CRL_workshops_output days = 120 }
+			add_equipment_to_stockpile = { type = infantry_equipment amount = 100 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	CRL_resource_rationing = {
+		icon = generic_industry
+		cost = 35
+		days_re_enable = 240
+		complete_effect = {
+			add_timed_idea = { idea = CRL_rationing days = 90 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	CRL_redirect_army_orders = {
+		icon = generic_industry
+		cost = 35
+		days_re_enable = 240
+		complete_effect = {
+			add_timed_idea = { idea = CRL_army_orders days = 90 }
+			add_equipment_to_stockpile = { type = infantry_equipment amount = 200 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+CRL_prepare_for_split = {
+	CRL_fortify_northern_line = {
+		icon = generic_military
+		cost = 75
+		available = {
+			has_country_flag = CRL_northern_question_raised
+		}
+		fire_only_once = yes
+		complete_effect = {
+			169 = { add_building_construction = { type = bunker level = 1 province = 169 instant_build = yes } }
+			170 = { add_building_construction = { type = bunker level = 1 province = 170 instant_build = yes } }
+			171 = { add_building_construction = { type = bunker level = 1 province = 171 instant_build = yes } }
+			172 = { add_building_construction = { type = bunker level = 1 province = 172 instant_build = yes } }
+			173 = { add_building_construction = { type = bunker level = 1 province = 173 instant_build = yes } }
+			174 = { add_building_construction = { type = bunker level = 1 province = 174 instant_build = yes } }
+			175 = { add_building_construction = { type = bunker level = 1 province = 175 instant_build = yes } }
+			176 = { add_building_construction = { type = bunker level = 1 province = 176 instant_build = yes } }
+			177 = { add_building_construction = { type = bunker level = 1 province = 177 instant_build = yes } }
+			178 = { add_building_construction = { type = bunker level = 1 province = 178 instant_build = yes } }
+			179 = { add_building_construction = { type = bunker level = 1 province = 179 instant_build = yes } }
+			180 = { add_building_construction = { type = bunker level = 1 province = 180 instant_build = yes } }
+			181 = { add_building_construction = { type = bunker level = 1 province = 181 instant_build = yes } }
+			182 = { add_building_construction = { type = bunker level = 1 province = 182 instant_build = yes } }
+			183 = { add_building_construction = { type = bunker level = 1 province = 183 instant_build = yes } }
+			184 = { add_building_construction = { type = bunker level = 1 province = 184 instant_build = yes } }
+			217 = { add_building_construction = { type = bunker level = 1 province = 217 instant_build = yes } }
+			218 = { add_building_construction = { type = bunker level = 1 province = 218 instant_build = yes } }
+			219 = { add_building_construction = { type = bunker level = 1 province = 219 instant_build = yes } }
+			220 = { add_building_construction = { type = bunker level = 1 province = 220 instant_build = yes } }
+			221 = { add_building_construction = { type = bunker level = 1 province = 221 instant_build = yes } }
+			222 = { add_building_construction = { type = bunker level = 1 province = 222 instant_build = yes } }
+			223 = { add_building_construction = { type = bunker level = 1 province = 223 instant_build = yes } }
+			224 = { add_building_construction = { type = bunker level = 1 province = 224 instant_build = yes } }
+			225 = { add_building_construction = { type = bunker level = 1 province = 225 instant_build = yes } }
+			226 = { add_building_construction = { type = bunker level = 1 province = 226 instant_build = yes } }
+			227 = { add_building_construction = { type = bunker level = 1 province = 227 instant_build = yes } }
+			228 = { add_building_construction = { type = bunker level = 1 province = 228 instant_build = yes } }
+			229 = { add_building_construction = { type = bunker level = 1 province = 229 instant_build = yes } }
+			230 = { add_building_construction = { type = bunker level = 1 province = 230 instant_build = yes } }
+			231 = { add_building_construction = { type = bunker level = 1 province = 231 instant_build = yes } }
+			232 = { add_building_construction = { type = bunker level = 1 province = 232 instant_build = yes } }
+			233 = { add_building_construction = { type = bunker level = 1 province = 233 instant_build = yes } }
+			234 = { add_building_construction = { type = bunker level = 1 province = 234 instant_build = yes } }
+			235 = { add_building_construction = { type = bunker level = 1 province = 235 instant_build = yes } }
+			236 = { add_building_construction = { type = bunker level = 1 province = 236 instant_build = yes } }
+			237 = { add_building_construction = { type = bunker level = 1 province = 237 instant_build = yes } }
+			238 = { add_building_construction = { type = bunker level = 1 province = 238 instant_build = yes } }
+			239 = { add_building_construction = { type = bunker level = 1 province = 239 instant_build = yes } }
+			240 = { add_building_construction = { type = bunker level = 1 province = 240 instant_build = yes } }
+			241 = { add_building_construction = { type = bunker level = 1 province = 241 instant_build = yes } }
+			242 = { add_building_construction = { type = bunker level = 1 province = 242 instant_build = yes } }
+			243 = { add_building_construction = { type = bunker level = 1 province = 243 instant_build = yes } }
+			244 = { add_building_construction = { type = bunker level = 1 province = 244 instant_build = yes } }
+			245 = { add_building_construction = { type = bunker level = 1 province = 245 instant_build = yes } }
+			246 = { add_building_construction = { type = bunker level = 1 province = 246 instant_build = yes } }
+			247 = { add_building_construction = { type = bunker level = 1 province = 247 instant_build = yes } }
+			248 = { add_building_construction = { type = bunker level = 1 province = 248 instant_build = yes } }
+			249 = { add_building_construction = { type = bunker level = 1 province = 249 instant_build = yes } }
+			250 = { add_building_construction = { type = bunker level = 1 province = 250 instant_build = yes } }
+			251 = { add_building_construction = { type = bunker level = 1 province = 251 instant_build = yes } }
+			252 = { add_building_construction = { type = bunker level = 1 province = 252 instant_build = yes } }
+			253 = { add_building_construction = { type = bunker level = 1 province = 253 instant_build = yes } }
+			254 = { add_building_construction = { type = bunker level = 1 province = 254 instant_build = yes } }
+			255 = { add_building_construction = { type = bunker level = 1 province = 255 instant_build = yes } }
+			256 = { add_building_construction = { type = bunker level = 1 province = 256 instant_build = yes } }
+			257 = { add_building_construction = { type = bunker level = 1 province = 257 instant_build = yes } }
+			258 = { add_building_construction = { type = bunker level = 1 province = 258 instant_build = yes } }
+			259 = { add_building_construction = { type = bunker level = 1 province = 259 instant_build = yes } }
+			260 = { add_building_construction = { type = bunker level = 1 province = 260 instant_build = yes } }
+			261 = { add_building_construction = { type = bunker level = 1 province = 261 instant_build = yes } }
+			262 = { add_building_construction = { type = bunker level = 1 province = 262 instant_build = yes } }
+			263 = { add_building_construction = { type = bunker level = 1 province = 263 instant_build = yes } }
+			264 = { add_building_construction = { type = bunker level = 1 province = 264 instant_build = yes } }
+			set_country_flag = CRL_north_fortified
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	CRL_evacuate_army_depots = {
+		icon = generic_military
+		cost = 50
+		available = {
+			has_country_flag = CRL_northern_question_raised
+		}
+		fire_only_once = yes
+		complete_effect = {
+			add_equipment_to_stockpile = { type = infantry_equipment amount = 500 }
+			set_country_flag = CRL_depots_evacuated
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	CRL_check_the_officers = {
+		icon = generic_military
+		cost = 40
+		fire_only_once = yes
+		complete_effect = {
+			add_timed_idea = { idea = CRL_officer_checks days = 365 }
+			set_country_flag = CRL_officers_loyal
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	CRL_prepare_the_capital = {
+		icon = generic_military
+		cost = 50
+		fire_only_once = yes
+		complete_effect = {
+			210 = { add_building_construction = { type = bunker level = 2 province = 210 instant_build = yes } }
+			set_country_flag = CRL_capital_prepared
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	CRL_form_the_reserve = {
+		icon = generic_military
+		cost = 40
+		days_re_enable = 120
+		complete_effect = {
+			add_equipment_to_stockpile = { type = infantry_equipment amount = 300 }
+			add_manpower = 4000
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

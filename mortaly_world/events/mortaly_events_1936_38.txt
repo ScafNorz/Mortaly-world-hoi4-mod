@@ -1,0 +1,220 @@
+add_namespace = mortaly_bli
+add_namespace = mortaly_crl
+
+country_event = {
+	id = mortaly_crl.1
+	title = mortaly_crl.1.t
+	desc = mortaly_crl.1.d
+	fire_only_once = yes
+	trigger = {
+		original_tag = CRL
+		NOT = { has_global_flag = civil_war_started }
+		date > 1936.2.1
+		date < 1936.12.1
+	}
+	mean_time_to_happen = {
+		days = 15
+	}
+	option = {
+		name = mortaly_crl.1.a
+		add_timed_idea = { idea = CRL_treasury_industry days = 365 }
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = mortaly_crl.1.b
+		add_equipment_to_stockpile = { type = infantry_equipment amount = 400 }
+		add_timed_idea = { idea = CRL_treasury_army days = 365 }
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = mortaly_crl.2
+	title = mortaly_crl.2.t
+	desc = mortaly_crl.2.d
+	fire_only_once = yes
+	trigger = {
+		original_tag = CRL
+		NOT = { has_global_flag = civil_war_started }
+		date > 1936.4.1
+		date < 1937.1.1
+	}
+	mean_time_to_happen = {
+		days = 20
+	}
+	option = {
+		name = mortaly_crl.2.a
+		add_political_power = 25
+		set_country_flag = CRL_islands_claim_declared
+		if = { limit = { country_exists = BLI } BLI = { country_event = { id = mortaly_bli.1 days = 2 } } }
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = mortaly_crl.2.b
+		add_stability = 0.02
+		if = { limit = { country_exists = BLI } BLI = { country_event = { id = mortaly_bli.1 days = 2 } } }
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = mortaly_bli.1
+	title = mortaly_bli.1.t
+	desc = mortaly_bli.1.d
+	is_triggered_only = yes
+	option = {
+		name = mortaly_bli.1.a
+		add_stability = 0.03
+		set_country_flag = BLI_independence_affirmed
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = mortaly_bli.1.b
+		add_political_power = 25
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = mortaly_crl.3
+	title = mortaly_crl.3.t
+	desc = mortaly_crl.3.d
+	fire_only_once = yes
+	trigger = {
+		original_tag = CRL
+		NOT = { has_global_flag = civil_war_started }
+		date > 1937.2.1
+		date < 1938.1.1
+	}
+	mean_time_to_happen = {
+		days = 15
+	}
+	option = {
+		name = mortaly_crl.3.a
+		add_timed_idea = { idea = CRL_strike_concessions days = 180 }
+		set_country_flag = CRL_north_conceded
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = mortaly_crl.3.b
+		add_stability = 0.03
+		set_country_flag = CRL_north_repressed
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = mortaly_crl.4
+	title = mortaly_crl.4.t
+	desc = mortaly_crl.4.d
+	fire_only_once = yes
+	trigger = {
+		original_tag = CRL
+		NOT = { has_global_flag = civil_war_started }
+		date > 1937.6.1
+		date < 1938.4.1
+	}
+	mean_time_to_happen = {
+		days = 20
+	}
+	option = {
+		name = mortaly_crl.4.a
+		add_stability = -0.03
+		army_experience = 10
+		set_country_flag = CRL_officers_purged
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = mortaly_crl.4.b
+		add_political_power = 25
+		set_country_flag = CRL_officers_tolerated
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = mortaly_crl.5
+	title = mortaly_crl.5.t
+	desc = mortaly_crl.5.d
+	fire_only_once = yes
+	trigger = {
+		original_tag = CRL
+		NOT = { has_global_flag = civil_war_started }
+		date > 1938.1.15
+		date < 1938.9.1
+	}
+	mean_time_to_happen = {
+		days = 15
+	}
+	option = {
+		name = mortaly_crl.5.a
+		add_political_power = -25
+		add_stability = 0.02
+		set_global_flag = scaf_yuri_movement
+		set_country_flag = CRL_watching_scaf_yuri
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = mortaly_crl.5.b
+		add_political_power = 25
+		set_global_flag = scaf_yuri_movement
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = mortaly_crl.6
+	title = mortaly_crl.6.t
+	desc = mortaly_crl.6.d
+	fire_only_once = yes
+	trigger = {
+		original_tag = CRL
+		NOT = { has_global_flag = civil_war_started }
+		date > 1938.8.1
+		date < 1939.1.1
+	}
+	mean_time_to_happen = {
+		days = 15
+	}
+	option = {
+		name = mortaly_crl.6.a
+		add_timed_idea = { idea = CRL_last_order_defence days = 365 }
+		set_country_flag = CRL_north_tightened
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = mortaly_crl.6.b
+		add_stability = 0.05
+		set_country_flag = CRL_north_heard
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = mortaly_bli.2
+	title = mortaly_bli.2.t
+	desc = mortaly_bli.2.d
+	fire_only_once = yes
+	trigger = {
+		original_tag = BLI
+		NOT = { has_global_flag = civil_war_started }
+		date > 1938.6.1
+		date < 1939.1.1
+	}
+	mean_time_to_happen = {
+		days = 20
+	}
+	option = {
+		name = mortaly_bli.2.a
+		set_country_flag = BLI_prepared_to_help
+		add_political_power = 25
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = mortaly_bli.2.b
+		add_stability = 0.02
+		set_country_flag = BLI_prepared_neutral
+		ai_chance = { factor = 0 }
+	}
+}
+

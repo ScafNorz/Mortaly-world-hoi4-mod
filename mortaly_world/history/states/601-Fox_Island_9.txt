@@ -1,0 +1,22 @@
+state = {
+	id = 601
+	name = "STATE_601"
+	manpower = 9000
+	state_category = city
+	history = {
+		owner = FOX
+		add_core_of = FOX
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 1
+		}
+		victory_points = {
+			601 5
+		}
+	}
+	provinces = {
+		601
+	}
+	buildings_max_level_factor = 1.0
+}

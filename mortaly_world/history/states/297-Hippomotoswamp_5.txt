@@ -1,0 +1,17 @@
+state = {
+	id = 297
+	name = "STATE_297"
+	manpower = 6000
+	state_category = rural
+	history = {
+		owner = HMS
+		add_core_of = HMS
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = {
+		297
+	}
+	buildings_max_level_factor = 1.0
+}

@@ -1,0 +1,297 @@
+focus_tree = {
+	id = mortaly_pcl_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 20
+			tag = PCL
+		}
+	}
+	default = no
+	initial_show_position = { focus = PCL_provisional_council }
+
+	focus = {
+		id = PCL_provisional_council
+		icon = GFX_goal_generic_political_pressure
+		x = 3
+		y = 0
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_political_power = 50
+			set_country_flag = PCL_council_formed
+		}
+	}
+
+	focus = {
+		id = PCL_scaf_declaration
+		icon = GFX_goal_generic_national_unity
+		x = 1
+		y = 1
+		cost = 5
+		prerequisite = { focus = PCL_provisional_council }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = PCL_yuri_command
+		icon = GFX_goal_generic_army_doctrines
+		x = 5
+		y = 1
+		cost = 5
+		prerequisite = { focus = PCL_provisional_council }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			army_experience = 25
+			add_war_support = 0.03
+		}
+	}
+
+	focus = {
+		id = PCL_restore_civil_rights
+		icon = GFX_goal_generic_national_unity
+		x = 1
+		y = 2
+		cost = 5
+		prerequisite = { focus = PCL_scaf_declaration }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = PCL_civil_rights
+		}
+	}
+
+	focus = {
+		id = PCL_northern_administration
+		icon = GFX_goal_generic_political_pressure
+		x = 5
+		y = 2
+		cost = 5
+		prerequisite = { focus = PCL_yuri_command }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = PCL_northern_admin
+		}
+	}
+
+	focus = {
+		id = PCL_call_the_militia
+		icon = GFX_goal_generic_forced_march
+		x = 10
+		y = 0
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_manpower = 5000
+			add_equipment_to_stockpile = { type = infantry_equipment amount = 400 }
+		}
+	}
+
+	focus = {
+		id = PCL_capture_the_depots
+		icon = GFX_goal_generic_small_arms
+		x = 8
+		y = 1
+		cost = 5
+		prerequisite = { focus = PCL_call_the_militia }
+		available = { controls_state = 169 }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = { type = infantry_equipment amount = 600 }
+		}
+	}
+
+	focus = {
+		id = PCL_people_army
+		icon = GFX_goal_generic_army_doctrines
+		x = 12
+		y = 1
+		cost = 5
+		prerequisite = { focus = PCL_call_the_militia }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = PCL_people_army_spirit
+		}
+	}
+
+	focus = {
+		id = PCL_field_command
+		icon = GFX_goal_generic_army_doctrines
+		x = 12
+		y = 2
+		cost = 5
+		prerequisite = { focus = PCL_people_army }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = PCL_field_command_spirit
+		}
+	}
+
+	focus = {
+		id = PCL_defend_the_north
+		icon = GFX_goal_generic_army_doctrines
+		x = 10
+		y = 3
+		cost = 10
+		prerequisite = { focus = PCL_capture_the_depots }
+		prerequisite = { focus = PCL_field_command }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = PCL_northern_defence
+		}
+	}
+
+	focus = {
+		id = PCL_appeal_to_the_isles
+		icon = GFX_goal_generic_alliance
+		x = 18
+		y = 0
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			set_country_flag = PCL_appealed_to_isles
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = PCL_supply_corridor
+		icon = GFX_goal_generic_trade
+		x = 17
+		y = 1
+		cost = 5
+		prerequisite = { focus = PCL_appeal_to_the_isles }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = PCL_supply_corridor_spirit
+		}
+	}
+
+	focus = {
+		id = PCL_joint_command
+		icon = GFX_goal_generic_alliance
+		x = 19
+		y = 1
+		cost = 5
+		prerequisite = { focus = PCL_appeal_to_the_isles }
+		available = { BLI = { has_country_flag = BLI_joined_peace_alliance } }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			army_experience = 25
+			add_war_support = 0.03
+		}
+	}
+
+	focus = {
+		id = PCL_constitution
+		icon = GFX_goal_generic_national_unity
+		x = 24
+		y = 0
+		cost = 10
+		available = { has_country_flag = PCL_won_civil_war }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			remove_ideas = PCL_provisional_government
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = PCL_rebuild_the_country
+		icon = GFX_goal_generic_construction
+		x = 22
+		y = 1
+		cost = 5
+		prerequisite = { focus = PCL_constitution }
+		available = { has_country_flag = PCL_won_civil_war }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			every_owned_state = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+			random_owned_state = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+		}
+	}
+
+	focus = {
+		id = PCL_civilian_control
+		icon = GFX_goal_generic_political_pressure
+		x = 26
+		y = 1
+		cost = 5
+		prerequisite = { focus = PCL_constitution }
+		available = { has_country_flag = PCL_won_civil_war }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = PCL_civilian_control_spirit
+		}
+	}
+
+	focus = {
+		id = PCL_amnesty
+		icon = GFX_goal_generic_national_unity
+		x = 24
+		y = 2
+		cost = 5
+		prerequisite = { focus = PCL_rebuild_the_country }
+		prerequisite = { focus = PCL_civilian_control }
+		available = { has_country_flag = PCL_won_civil_war }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_stability = 0.03
+			add_ideas = PCL_amnesty_spirit
+		}
+	}
+
+	focus = {
+		id = PCL_new_republic
+		icon = GFX_goal_generic_national_unity
+		x = 24
+		y = 3
+		cost = 10
+		prerequisite = { focus = PCL_amnesty }
+		available = { has_country_flag = PCL_won_civil_war }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			remove_ideas = PCL_popular_uprising
+			add_ideas = PCL_new_republic_spirit
+		}
+	}
+}

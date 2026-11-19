@@ -1,0 +1,21 @@
+state = {
+	id = 269
+	name = "STATE_269"
+	manpower = 5000
+	state_category = rural
+	resources = {
+		oil = 42
+		chromium = 22
+	}
+	history = {
+		owner = CRL
+		add_core_of = CRL
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = {
+		269
+	}
+	buildings_max_level_factor = 1.0
+}

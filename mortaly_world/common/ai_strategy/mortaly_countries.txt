@@ -1,0 +1,129 @@
+# Стратегии ИИ стран Mortaly world (этап 24)
+
+MORTALY_crl_civil_war = {
+	allowed = { original_tag = CRL }
+	enable = {
+		has_global_flag = civil_war_started
+		NOT = { has_global_flag = civil_war_ended }
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = conquer
+		id = "PCL"
+		value = 400
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "PCL"
+		value = 400
+	}
+	ai_strategy = {
+		type = conquer
+		id = "BLI"
+		value = 150
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "BLI"
+		value = 200
+	}
+}
+
+MORTALY_pcl_civil_war = {
+	allowed = { original_tag = PCL }
+	enable = {
+		has_global_flag = civil_war_started
+		NOT = { has_global_flag = civil_war_ended }
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = conquer
+		id = "CRL"
+		value = 400
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "CRL"
+		value = 400
+	}
+	ai_strategy = {
+		type = alliance
+		id = "BLI"
+		value = 300
+	}
+	ai_strategy = {
+		type = protect
+		id = "BLI"
+		value = 200
+	}
+}
+
+MORTALY_bli_civil_war = {
+	allowed = { original_tag = BLI }
+	enable = {
+		has_global_flag = civil_war_started
+		NOT = { has_global_flag = civil_war_ended }
+		PCL = { exists = yes }
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = alliance
+		id = "PCL"
+		value = 300
+	}
+	ai_strategy = {
+		type = protect
+		id = "PCL"
+		value = 200
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "CRL"
+		value = 100
+	}
+}
+
+# До войны Жестокая земля не трогает острова, а острова не лезут в чужие дела
+MORTALY_crl_leaves_islands = {
+	allowed = { original_tag = CRL }
+	enable = {
+		NOT = { has_global_flag = civil_war_started }
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = conquer
+		id = "BLI"
+		value = -1000
+	}
+}
+
+MORTALY_bli_peaceful = {
+	allowed = { original_tag = BLI }
+	enable = {
+		NOT = { has_global_flag = civil_war_started }
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = avoid_starting_wars
+		value = -300
+	}
+}
+
+# После победы Мирная земля держится за острова
+MORTALY_pcl_keeps_islands = {
+	allowed = { original_tag = PCL }
+	enable = {
+		has_global_flag = pcl_won_civil_war
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = protect
+		id = "BLI"
+		value = 300
+	}
+	ai_strategy = {
+		type = alliance
+		id = "BLI"
+		value = 300
+	}
+}

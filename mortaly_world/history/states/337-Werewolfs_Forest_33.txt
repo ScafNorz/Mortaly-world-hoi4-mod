@@ -1,0 +1,21 @@
+state = {
+	id = 337
+	name = "STATE_337"
+	manpower = 3000
+	state_category = rural
+	history = {
+		owner = WWF
+		add_core_of = WWF
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		victory_points = {
+			337 1
+		}
+	}
+	provinces = {
+		337
+	}
+	buildings_max_level_factor = 1.0
+}

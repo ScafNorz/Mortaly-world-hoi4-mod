@@ -1,0 +1,17 @@
+state = {
+	id = 283
+	name = "STATE_283"
+	manpower = 10000
+	state_category = rural
+	history = {
+		owner = OVS
+		add_core_of = OVS
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = {
+		283
+	}
+	buildings_max_level_factor = 1.0
+}

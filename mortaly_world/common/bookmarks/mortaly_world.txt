@@ -1,0 +1,21 @@
+bookmarks = {
+	bookmark = {
+		name = "SCAF_BOOKMARK_NAME"
+		desc = "SCAF_BOOKMARK_DESC"
+		date = 1936.1.1.12
+		picture = "GFX_select_date_1936"
+		default_country = "ORD"
+		default = yes
+		"YOZ" = { history = "YOZ_BOOKMARK_DESC" ideology = neutrality ideas = { } }
+		"VMP" = { history = "VMP_BOOKMARK_DESC" ideology = neutrality ideas = { } }
+		"WWF" = { history = "WWF_BOOKMARK_DESC" ideology = neutrality ideas = { } }
+		"CRL" = { history = "CRL_BOOKMARK_DESC" ideology = fascism ideas = { } }
+		"BLI" = { history = "BLI_BOOKMARK_DESC" ideology = democratic ideas = { } }
+		"ORD" = { history = "ORD_BOOKMARK_DESC" ideology = neutrality ideas = { } }
+		"FOX" = { history = "FOX_BOOKMARK_DESC" ideology = neutrality ideas = { } }
+		"HMS" = { history = "HMS_BOOKMARK_DESC" ideology = neutrality ideas = { } }
+		"SVB" = { history = "SVB_BOOKMARK_DESC" ideology = neutrality ideas = { } }
+		"DLD" = { history = "DLD_BOOKMARK_DESC" ideology = neutrality ideas = { } }
+		"OVS" = { history = "OVS_BOOKMARK_DESC" ideology = neutrality ideas = { } }
+	}
+}

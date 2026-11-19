@@ -1,0 +1,22 @@
+state = {
+	id = 304
+	name = "STATE_304"
+	manpower = 6000
+	state_category = city
+	history = {
+		owner = HMS
+		add_core_of = HMS
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 1
+		}
+		victory_points = {
+			304 5
+		}
+	}
+	provinces = {
+		304
+	}
+	buildings_max_level_factor = 1.0
+}

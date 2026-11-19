@@ -1,0 +1,21 @@
+state = {
+	id = 293
+	name = "STATE_293"
+	manpower = 6000
+	state_category = rural
+	history = {
+		owner = HMS
+		add_core_of = HMS
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		victory_points = {
+			293 1
+		}
+	}
+	provinces = {
+		293
+	}
+	buildings_max_level_factor = 1.0
+}

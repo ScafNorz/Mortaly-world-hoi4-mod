@@ -1,0 +1,134 @@
+# Северная половина Жестокой земли (по площади) уходит Мирной земле.
+# TODO: вызвать из события/фокуса Жестокой земли, когда Scaf пришлёт условия гражданской войны.
+mortaly_cruel_land_split = {
+	PCL = {
+		transfer_state = 169
+		transfer_state = 170
+		transfer_state = 171
+		transfer_state = 172
+		transfer_state = 173
+		transfer_state = 174
+		transfer_state = 175
+		transfer_state = 176
+		transfer_state = 177
+		transfer_state = 178
+		transfer_state = 179
+		transfer_state = 180
+		transfer_state = 181
+		transfer_state = 182
+		transfer_state = 183
+		transfer_state = 184
+		transfer_state = 217
+		transfer_state = 218
+		transfer_state = 219
+		transfer_state = 220
+		transfer_state = 221
+		transfer_state = 222
+		transfer_state = 223
+		transfer_state = 224
+		transfer_state = 225
+		transfer_state = 226
+		transfer_state = 227
+		transfer_state = 228
+		transfer_state = 229
+		transfer_state = 230
+		transfer_state = 231
+		transfer_state = 232
+		transfer_state = 233
+		transfer_state = 234
+		transfer_state = 235
+		transfer_state = 236
+		transfer_state = 237
+		transfer_state = 238
+		transfer_state = 239
+		transfer_state = 240
+		transfer_state = 241
+		transfer_state = 242
+		transfer_state = 243
+		transfer_state = 244
+		transfer_state = 245
+		transfer_state = 246
+		transfer_state = 247
+		transfer_state = 248
+		transfer_state = 249
+		transfer_state = 250
+		transfer_state = 251
+		transfer_state = 252
+		transfer_state = 253
+		transfer_state = 254
+		transfer_state = 255
+		transfer_state = 256
+		transfer_state = 257
+		transfer_state = 258
+		transfer_state = 259
+		transfer_state = 260
+		transfer_state = 261
+		transfer_state = 262
+		transfer_state = 263
+		transfer_state = 264
+		169 = { add_core_of = PCL }
+		170 = { add_core_of = PCL }
+		171 = { add_core_of = PCL }
+		172 = { add_core_of = PCL }
+		173 = { add_core_of = PCL }
+		174 = { add_core_of = PCL }
+		175 = { add_core_of = PCL }
+		176 = { add_core_of = PCL }
+		177 = { add_core_of = PCL }
+		178 = { add_core_of = PCL }
+		179 = { add_core_of = PCL }
+		180 = { add_core_of = PCL }
+		181 = { add_core_of = PCL }
+		182 = { add_core_of = PCL }
+		183 = { add_core_of = PCL }
+		184 = { add_core_of = PCL }
+		217 = { add_core_of = PCL }
+		218 = { add_core_of = PCL }
+		219 = { add_core_of = PCL }
+		220 = { add_core_of = PCL }
+		221 = { add_core_of = PCL }
+		222 = { add_core_of = PCL }
+		223 = { add_core_of = PCL }
+		224 = { add_core_of = PCL }
+		225 = { add_core_of = PCL }
+		226 = { add_core_of = PCL }
+		227 = { add_core_of = PCL }
+		228 = { add_core_of = PCL }
+		229 = { add_core_of = PCL }
+		230 = { add_core_of = PCL }
+		231 = { add_core_of = PCL }
+		232 = { add_core_of = PCL }
+		233 = { add_core_of = PCL }
+		234 = { add_core_of = PCL }
+		235 = { add_core_of = PCL }
+		236 = { add_core_of = PCL }
+		237 = { add_core_of = PCL }
+		238 = { add_core_of = PCL }
+		239 = { add_core_of = PCL }
+		240 = { add_core_of = PCL }
+		241 = { add_core_of = PCL }
+		242 = { add_core_of = PCL }
+		243 = { add_core_of = PCL }
+		244 = { add_core_of = PCL }
+		245 = { add_core_of = PCL }
+		246 = { add_core_of = PCL }
+		247 = { add_core_of = PCL }
+		248 = { add_core_of = PCL }
+		249 = { add_core_of = PCL }
+		250 = { add_core_of = PCL }
+		251 = { add_core_of = PCL }
+		252 = { add_core_of = PCL }
+		253 = { add_core_of = PCL }
+		254 = { add_core_of = PCL }
+		255 = { add_core_of = PCL }
+		256 = { add_core_of = PCL }
+		257 = { add_core_of = PCL }
+		258 = { add_core_of = PCL }
+		259 = { add_core_of = PCL }
+		260 = { add_core_of = PCL }
+		261 = { add_core_of = PCL }
+		262 = { add_core_of = PCL }
+		263 = { add_core_of = PCL }
+		264 = { add_core_of = PCL }
+	}
+}

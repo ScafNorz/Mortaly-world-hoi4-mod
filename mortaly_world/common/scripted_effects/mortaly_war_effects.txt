@@ -1,0 +1,17 @@
+# Вступление Голубых островов в союз с Мирной землёй (фракция + война с Жестокой землёй). Область: BLI.
+mortaly_bli_join_war = {
+	set_country_flag = BLI_joined_peace_alliance
+	set_country_flag = BLI_ports_open
+	if = {
+		limit = { country_exists = PCL NOT = { is_in_faction_with = PCL } }
+		if = {
+			limit = { PCL = { is_in_faction = no } }
+			PCL = { create_faction = PCL_peace_union }
+		}
+		add_to_faction = PCL
+	}
+	if = {
+		limit = { country_exists = CRL has_global_flag = civil_war_started NOT = { has_war_with = CRL } }
+		declare_war_on = { target = CRL type = annex_everything }
+	}
+}

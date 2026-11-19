@@ -1,0 +1,518 @@
+focus_tree = {
+	id = mortaly_crl_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 20
+			tag = CRL
+		}
+	}
+	default = no
+	initial_show_position = { focus = CRL_audit_the_treasury }
+
+	focus = {
+		id = CRL_audit_the_treasury
+		icon = GFX_goal_generic_production
+		x = 3
+		y = 0
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.02
+		}
+	}
+
+	focus = {
+		id = CRL_reopen_the_mines
+		icon = GFX_goal_generic_construction
+		x = 1
+		y = 1
+		cost = 5
+		prerequisite = { focus = CRL_audit_the_treasury }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			random_owned_state = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = CRL_repair_railways
+		icon = GFX_goal_generic_construction
+		x = 5
+		y = 1
+		cost = 5
+		prerequisite = { focus = CRL_audit_the_treasury }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			every_owned_state = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+		}
+	}
+
+	focus = {
+		id = CRL_small_workshops
+		icon = GFX_goal_generic_production
+		x = 1
+		y = 2
+		cost = 5
+		prerequisite = { focus = CRL_reopen_the_mines }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			random_owned_state = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+		}
+	}
+
+	focus = {
+		id = CRL_state_contracts
+		icon = GFX_goal_generic_small_arms
+		x = 5
+		y = 2
+		cost = 5
+		prerequisite = { focus = CRL_repair_railways }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			random_owned_state = { add_building_construction = { type = arms_factory level = 1 instant_build = yes } }
+			add_stability = -0.02
+		}
+	}
+
+	focus = {
+		id = CRL_local_industry
+		icon = GFX_goal_generic_production
+		x = 3
+		y = 3
+		cost = 5
+		prerequisite = { focus = CRL_small_workshops }
+		prerequisite = { focus = CRL_state_contracts }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = CRL_local_industry_spirit
+		}
+	}
+
+	focus = {
+		id = CRL_economic_stabilisation
+		icon = GFX_goal_generic_production
+		x = 3
+		y = 4
+		cost = 10
+		prerequisite = { focus = CRL_local_industry }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			swap_ideas = { remove_idea = CRL_dead_economy add_idea = CRL_dead_economy_weak }
+		}
+	}
+
+	focus = {
+		id = CRL_war_industry
+		icon = GFX_goal_generic_small_arms
+		x = 3
+		y = 5
+		cost = 5
+		prerequisite = { focus = CRL_economic_stabilisation }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = CRL_war_industry_spirit
+			add_equipment_to_stockpile = { type = infantry_equipment amount = 300 }
+		}
+	}
+
+	focus = {
+		id = CRL_professional_army
+		icon = GFX_goal_generic_army_doctrines
+		x = 15
+		y = 0
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			army_experience = 25
+		}
+	}
+
+	focus = {
+		id = CRL_infantry_regulations
+		icon = GFX_goal_generic_army_doctrines
+		x = 13
+		y = 1
+		cost = 5
+		prerequisite = { focus = CRL_professional_army }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = CRL_infantry_regulations_spirit
+		}
+	}
+
+	focus = {
+		id = CRL_training_centres
+		icon = GFX_goal_generic_army_doctrines
+		x = 17
+		y = 1
+		cost = 5
+		prerequisite = { focus = CRL_professional_army }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = CRL_training_centres_spirit
+		}
+	}
+
+	focus = {
+		id = CRL_special_forces_school
+		icon = GFX_goal_generic_special_forces
+		x = 13
+		y = 2
+		cost = 5
+		prerequisite = { focus = CRL_infantry_regulations }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = CRL_special_forces_school_spirit
+		}
+	}
+
+	focus = {
+		id = CRL_standardised_weapons
+		icon = GFX_goal_generic_small_arms
+		x = 17
+		y = 2
+		cost = 5
+		prerequisite = { focus = CRL_training_centres }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = CRL_standard_weapons
+		}
+	}
+
+	focus = {
+		id = CRL_elite_command
+		icon = GFX_goal_generic_special_forces
+		x = 13
+		y = 3
+		cost = 5
+		prerequisite = { focus = CRL_special_forces_school }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			army_experience = 25
+			add_war_support = 0.03
+		}
+	}
+
+	focus = {
+		id = CRL_northern_garrisons
+		icon = GFX_goal_generic_army_doctrines
+		x = 15
+		y = 4
+		cost = 10
+		prerequisite = { focus = CRL_elite_command }
+		prerequisite = { focus = CRL_standardised_weapons }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = CRL_northern_garrisons_spirit
+						169 = { add_building_construction = { type = bunker level = 1 province = 169 instant_build = yes } }
+						170 = { add_building_construction = { type = bunker level = 1 province = 170 instant_build = yes } }
+						171 = { add_building_construction = { type = bunker level = 1 province = 171 instant_build = yes } }
+						172 = { add_building_construction = { type = bunker level = 1 province = 172 instant_build = yes } }
+						173 = { add_building_construction = { type = bunker level = 1 province = 173 instant_build = yes } }
+						174 = { add_building_construction = { type = bunker level = 1 province = 174 instant_build = yes } }
+						175 = { add_building_construction = { type = bunker level = 1 province = 175 instant_build = yes } }
+						176 = { add_building_construction = { type = bunker level = 1 province = 176 instant_build = yes } }
+						177 = { add_building_construction = { type = bunker level = 1 province = 177 instant_build = yes } }
+						178 = { add_building_construction = { type = bunker level = 1 province = 178 instant_build = yes } }
+						179 = { add_building_construction = { type = bunker level = 1 province = 179 instant_build = yes } }
+						180 = { add_building_construction = { type = bunker level = 1 province = 180 instant_build = yes } }
+						181 = { add_building_construction = { type = bunker level = 1 province = 181 instant_build = yes } }
+						182 = { add_building_construction = { type = bunker level = 1 province = 182 instant_build = yes } }
+						183 = { add_building_construction = { type = bunker level = 1 province = 183 instant_build = yes } }
+						184 = { add_building_construction = { type = bunker level = 1 province = 184 instant_build = yes } }
+						217 = { add_building_construction = { type = bunker level = 1 province = 217 instant_build = yes } }
+						218 = { add_building_construction = { type = bunker level = 1 province = 218 instant_build = yes } }
+						219 = { add_building_construction = { type = bunker level = 1 province = 219 instant_build = yes } }
+						220 = { add_building_construction = { type = bunker level = 1 province = 220 instant_build = yes } }
+						221 = { add_building_construction = { type = bunker level = 1 province = 221 instant_build = yes } }
+						222 = { add_building_construction = { type = bunker level = 1 province = 222 instant_build = yes } }
+						223 = { add_building_construction = { type = bunker level = 1 province = 223 instant_build = yes } }
+						224 = { add_building_construction = { type = bunker level = 1 province = 224 instant_build = yes } }
+						225 = { add_building_construction = { type = bunker level = 1 province = 225 instant_build = yes } }
+						226 = { add_building_construction = { type = bunker level = 1 province = 226 instant_build = yes } }
+						227 = { add_building_construction = { type = bunker level = 1 province = 227 instant_build = yes } }
+						228 = { add_building_construction = { type = bunker level = 1 province = 228 instant_build = yes } }
+						229 = { add_building_construction = { type = bunker level = 1 province = 229 instant_build = yes } }
+						230 = { add_building_construction = { type = bunker level = 1 province = 230 instant_build = yes } }
+						231 = { add_building_construction = { type = bunker level = 1 province = 231 instant_build = yes } }
+						232 = { add_building_construction = { type = bunker level = 1 province = 232 instant_build = yes } }
+						233 = { add_building_construction = { type = bunker level = 1 province = 233 instant_build = yes } }
+						234 = { add_building_construction = { type = bunker level = 1 province = 234 instant_build = yes } }
+						235 = { add_building_construction = { type = bunker level = 1 province = 235 instant_build = yes } }
+						236 = { add_building_construction = { type = bunker level = 1 province = 236 instant_build = yes } }
+						237 = { add_building_construction = { type = bunker level = 1 province = 237 instant_build = yes } }
+						238 = { add_building_construction = { type = bunker level = 1 province = 238 instant_build = yes } }
+						239 = { add_building_construction = { type = bunker level = 1 province = 239 instant_build = yes } }
+						240 = { add_building_construction = { type = bunker level = 1 province = 240 instant_build = yes } }
+						241 = { add_building_construction = { type = bunker level = 1 province = 241 instant_build = yes } }
+						242 = { add_building_construction = { type = bunker level = 1 province = 242 instant_build = yes } }
+						243 = { add_building_construction = { type = bunker level = 1 province = 243 instant_build = yes } }
+						244 = { add_building_construction = { type = bunker level = 1 province = 244 instant_build = yes } }
+						245 = { add_building_construction = { type = bunker level = 1 province = 245 instant_build = yes } }
+						246 = { add_building_construction = { type = bunker level = 1 province = 246 instant_build = yes } }
+						247 = { add_building_construction = { type = bunker level = 1 province = 247 instant_build = yes } }
+						248 = { add_building_construction = { type = bunker level = 1 province = 248 instant_build = yes } }
+						249 = { add_building_construction = { type = bunker level = 1 province = 249 instant_build = yes } }
+						250 = { add_building_construction = { type = bunker level = 1 province = 250 instant_build = yes } }
+						251 = { add_building_construction = { type = bunker level = 1 province = 251 instant_build = yes } }
+						252 = { add_building_construction = { type = bunker level = 1 province = 252 instant_build = yes } }
+						253 = { add_building_construction = { type = bunker level = 1 province = 253 instant_build = yes } }
+						254 = { add_building_construction = { type = bunker level = 1 province = 254 instant_build = yes } }
+						255 = { add_building_construction = { type = bunker level = 1 province = 255 instant_build = yes } }
+						256 = { add_building_construction = { type = bunker level = 1 province = 256 instant_build = yes } }
+						257 = { add_building_construction = { type = bunker level = 1 province = 257 instant_build = yes } }
+						258 = { add_building_construction = { type = bunker level = 1 province = 258 instant_build = yes } }
+						259 = { add_building_construction = { type = bunker level = 1 province = 259 instant_build = yes } }
+						260 = { add_building_construction = { type = bunker level = 1 province = 260 instant_build = yes } }
+						261 = { add_building_construction = { type = bunker level = 1 province = 261 instant_build = yes } }
+						262 = { add_building_construction = { type = bunker level = 1 province = 262 instant_build = yes } }
+						263 = { add_building_construction = { type = bunker level = 1 province = 263 instant_build = yes } }
+						264 = { add_building_construction = { type = bunker level = 1 province = 264 instant_build = yes } }
+		}
+	}
+
+	focus = {
+		id = CRL_general_mobilisation
+		icon = GFX_goal_generic_forced_march
+		x = 15
+		y = 5
+		cost = 10
+		prerequisite = { focus = CRL_northern_garrisons }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = CRL_general_mobilisation_spirit
+			add_war_support = 0.05
+			set_country_flag = CRL_mobilisation_unlocked
+		}
+	}
+
+	focus = {
+		id = CRL_closed_borders
+		icon = GFX_goal_generic_political_pressure
+		x = 27
+		y = 0
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			swap_ideas = { remove_idea = CRL_closed_country add_idea = CRL_closed_country_2 }
+		}
+	}
+
+	focus = {
+		id = CRL_internal_security
+		icon = GFX_goal_generic_political_pressure
+		x = 25
+		y = 1
+		cost = 5
+		prerequisite = { focus = CRL_closed_borders }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = CRL_internal_security_spirit
+		}
+	}
+
+	focus = {
+		id = CRL_control_the_press
+		icon = GFX_goal_generic_propaganda
+		x = 29
+		y = 1
+		cost = 5
+		prerequisite = { focus = CRL_closed_borders }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = -25
+		}
+	}
+
+	focus = {
+		id = CRL_loyal_officers
+		icon = GFX_goal_generic_army_doctrines
+		x = 25
+		y = 2
+		cost = 5
+		prerequisite = { focus = CRL_internal_security }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = CRL_loyal_officers_spirit
+			army_experience = 15
+			set_country_flag = CRL_officers_checked
+		}
+	}
+
+	focus = {
+		id = CRL_the_northern_question
+		icon = GFX_goal_generic_political_pressure
+		x = 29
+		y = 2
+		cost = 5
+		prerequisite = { focus = CRL_control_the_press }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			set_country_flag = CRL_northern_question_raised
+			add_political_power = 25
+		}
+	}
+
+	focus = {
+		id = CRL_secure_the_palace
+		icon = GFX_goal_generic_construction
+		x = 27
+		y = 3
+		cost = 5
+		prerequisite = { focus = CRL_loyal_officers }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			210 = { add_building_construction = { type = bunker level = 2 province = 210 instant_build = yes } }
+			add_equipment_to_stockpile = { type = infantry_equipment amount = 300 }
+		}
+	}
+
+	focus = {
+		id = CRL_prepare_for_the_split
+		icon = GFX_goal_generic_national_unity
+		x = 27
+		y = 4
+		cost = 10
+		prerequisite = { focus = CRL_secure_the_palace }
+		prerequisite = { focus = CRL_the_northern_question }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			set_country_flag = CRL_prepared_for_split
+			add_war_support = 0.05
+			add_equipment_to_stockpile = { type = infantry_equipment amount = 300 }
+		}
+	}
+
+	focus = {
+		id = CRL_restore_order
+		icon = GFX_goal_generic_political_pressure
+		x = 39
+		y = 0
+		cost = 5
+		available = { has_country_flag = CRL_won_civil_war }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = CRL_rebuild_the_north
+		icon = GFX_goal_generic_construction
+		x = 37
+		y = 1
+		cost = 5
+		prerequisite = { focus = CRL_restore_order }
+		available = { has_country_flag = CRL_won_civil_war }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			every_owned_state = { add_building_construction = { type = infrastructure level = 1 instant_build = yes } }
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = CRL_reconcile_or_punish
+		icon = GFX_goal_generic_political_pressure
+		x = 41
+		y = 1
+		cost = 5
+		prerequisite = { focus = CRL_restore_order }
+		available = { has_country_flag = CRL_won_civil_war }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			set_country_flag = CRL_reconcile_choice_open
+		}
+	}
+
+	focus = {
+		id = CRL_new_economic_plan
+		icon = GFX_goal_generic_production
+		x = 37
+		y = 2
+		cost = 10
+		prerequisite = { focus = CRL_rebuild_the_north }
+		available = { has_country_flag = CRL_won_civil_war }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			swap_ideas = { remove_idea = CRL_dead_economy_weak add_idea = CRL_new_plan }
+		}
+	}
+
+	focus = {
+		id = CRL_unified_state
+		icon = GFX_goal_generic_national_unity
+		x = 39
+		y = 3
+		cost = 10
+		prerequisite = { focus = CRL_new_economic_plan }
+		prerequisite = { focus = CRL_reconcile_or_punish }
+		available = { has_country_flag = CRL_won_civil_war }
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			if = { limit = { has_country_flag = CRL_amnesty } swap_ideas = { remove_idea = CRL_smoldering_split add_idea = CRL_united_nation } }
+			if = { limit = { NOT = { has_country_flag = CRL_amnesty } } remove_ideas = CRL_smoldering_split }
+		}
+	}
+}

@@ -1,0 +1,468 @@
+add_namespace = mortaly_war
+
+country_event = {
+	id = mortaly_war.1
+	title = mortaly_war.1.t
+	desc = mortaly_war.1.d
+	fire_only_once = yes
+	trigger = {
+		original_tag = CRL
+		NOT = { has_global_flag = civil_war_started }
+		date > 1939.1.1
+	}
+	mean_time_to_happen = {
+		days = 2
+	}
+	immediate = {
+		set_global_flag = civil_war_started
+		mortaly_cruel_land_split = yes
+		PCL = {
+			add_ideas = PCL_popular_uprising
+			add_ideas = PCL_provisional_government
+			add_ideas = PCL_northern_volunteers
+			add_manpower = 20000
+			if = { limit = { CRL = { has_country_flag = CRL_depots_evacuated } } add_equipment_to_stockpile = { type = infantry_equipment amount = 500 } }
+			if = { limit = { CRL = { NOT = { has_country_flag = CRL_depots_evacuated } } } add_equipment_to_stockpile = { type = infantry_equipment amount = 900 } }
+			mortaly_spawn_pcl_base = yes
+			if = { limit = { CRL = { has_country_flag = CRL_officers_tolerated } } mortaly_spawn_pcl_defectors = yes }
+			if = { limit = { OR = { CRL = { has_country_flag = CRL_north_repressed } CRL = { has_country_flag = CRL_north_tightened } } } mortaly_spawn_pcl_rebels = yes }
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment amount = 500 }
+		mortaly_spawn_crl_army = yes
+		if = { limit = { OR = { has_country_flag = CRL_officers_loyal has_country_flag = CRL_officers_purged } } mortaly_spawn_crl_guard = yes }
+		CRL = { declare_war_on = { target = PCL type = annex_everything } }
+		if = { limit = { country_exists = BLI } BLI = { country_event = { id = mortaly_war.3 days = 1 } } }
+		if = { limit = { is_ai = no } country_event = { id = mortaly_war.2 days = 1 } }
+		country_event = { id = mortaly_war.20 days = 30 }
+	}
+	option = {
+		name = mortaly_war.1.a
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = mortaly_war.2
+	title = mortaly_war.2.t
+	desc = mortaly_war.2.d
+	is_triggered_only = yes
+	option = {
+		name = mortaly_war.2.a
+		set_country_flag = CRL_player_stayed
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = mortaly_war.2.b
+		set_country_flag = CRL_player_to_scaf
+		PCL = { change_tag_from = CRL }
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = {
+	id = mortaly_war.3
+	title = mortaly_war.3.t
+	desc = mortaly_war.3.d
+	is_triggered_only = yes
+	option = {
+		name = mortaly_war.3.a
+		mortaly_bli_join_war = yes
+		if = { limit = { country_exists = PCL } PCL = { add_equipment_to_stockpile = { type = infantry_equipment amount = 300 } add_timed_idea = { idea = BLI_open_harbours days = 180 } } }
+		if = { limit = { NOT = { has_country_flag = BLI_division_sent } } set_country_flag = BLI_division_sent set_country_flag = BLI_sent_volunteers mortaly_spawn_bli_volunteers = yes }
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = mortaly_war.3.b
+		add_stability = 0.02
+		set_country_flag = BLI_neutral_in_war
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = {
+	id = mortaly_war.11
+	title = mortaly_war.11.t
+	desc = mortaly_war.11.d
+	is_triggered_only = yes
+	immediate = {
+		set_global_flag = civil_war_ended
+		set_global_flag = crl_won_civil_war
+		set_country_flag = CRL_won_civil_war
+		transfer_state = 169
+		transfer_state = 170
+		transfer_state = 171
+		transfer_state = 172
+		transfer_state = 173
+		transfer_state = 174
+		transfer_state = 175
+		transfer_state = 176
+		transfer_state = 177
+		transfer_state = 178
+		transfer_state = 179
+		transfer_state = 180
+		transfer_state = 181
+		transfer_state = 182
+		transfer_state = 183
+		transfer_state = 184
+		transfer_state = 185
+		transfer_state = 186
+		transfer_state = 187
+		transfer_state = 188
+		transfer_state = 189
+		transfer_state = 190
+		transfer_state = 191
+		transfer_state = 192
+		transfer_state = 193
+		transfer_state = 194
+		transfer_state = 195
+		transfer_state = 196
+		transfer_state = 197
+		transfer_state = 198
+		transfer_state = 199
+		transfer_state = 200
+		transfer_state = 201
+		transfer_state = 202
+		transfer_state = 203
+		transfer_state = 204
+		transfer_state = 205
+		transfer_state = 206
+		transfer_state = 207
+		transfer_state = 208
+		transfer_state = 209
+		transfer_state = 210
+		transfer_state = 211
+		transfer_state = 212
+		transfer_state = 213
+		transfer_state = 214
+		transfer_state = 215
+		transfer_state = 216
+		transfer_state = 217
+		transfer_state = 218
+		transfer_state = 219
+		transfer_state = 220
+		transfer_state = 221
+		transfer_state = 222
+		transfer_state = 223
+		transfer_state = 224
+		transfer_state = 225
+		transfer_state = 226
+		transfer_state = 227
+		transfer_state = 228
+		transfer_state = 229
+		transfer_state = 230
+		transfer_state = 231
+		transfer_state = 232
+		transfer_state = 233
+		transfer_state = 234
+		transfer_state = 235
+		transfer_state = 236
+		transfer_state = 237
+		transfer_state = 238
+		transfer_state = 239
+		transfer_state = 240
+		transfer_state = 241
+		transfer_state = 242
+		transfer_state = 243
+		transfer_state = 244
+		transfer_state = 245
+		transfer_state = 246
+		transfer_state = 247
+		transfer_state = 248
+		transfer_state = 249
+		transfer_state = 250
+		transfer_state = 251
+		transfer_state = 252
+		transfer_state = 253
+		transfer_state = 254
+		transfer_state = 255
+		transfer_state = 256
+		transfer_state = 257
+		transfer_state = 258
+		transfer_state = 259
+		transfer_state = 260
+		transfer_state = 261
+		transfer_state = 262
+		transfer_state = 263
+		transfer_state = 264
+		transfer_state = 265
+		transfer_state = 266
+		transfer_state = 267
+		transfer_state = 268
+		transfer_state = 269
+		transfer_state = 270
+		transfer_state = 271
+		transfer_state = 272
+		transfer_state = 273
+		transfer_state = 274
+		transfer_state = 275
+		transfer_state = 276
+		transfer_state = 277
+		transfer_state = 278
+		transfer_state = 279
+		transfer_state = 280
+		if = {
+			limit = { country_exists = BLI BLI = { has_country_flag = BLI_joined_peace_alliance } }
+			transfer_state = 605
+			transfer_state = 606
+			transfer_state = 607
+			transfer_state = 608
+			transfer_state = 609
+			transfer_state = 610
+			transfer_state = 611
+			transfer_state = 612
+			transfer_state = 613
+			transfer_state = 614
+			transfer_state = 615
+			transfer_state = 616
+			transfer_state = 617
+			transfer_state = 618
+			transfer_state = 619
+			transfer_state = 620
+		}
+	}
+	option = {
+		name = mortaly_war.11.a
+		set_country_flag = CRL_amnesty
+		add_stability = 0.05
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = mortaly_war.11.b
+		add_political_power = 50
+		set_country_flag = CRL_repression
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = mortaly_war.12
+	title = mortaly_war.12.t
+	desc = mortaly_war.12.d
+	is_triggered_only = yes
+	immediate = {
+		set_global_flag = civil_war_ended
+		set_global_flag = pcl_won_civil_war
+		set_country_flag = PCL_won_civil_war
+		transfer_state = 169
+		transfer_state = 170
+		transfer_state = 171
+		transfer_state = 172
+		transfer_state = 173
+		transfer_state = 174
+		transfer_state = 175
+		transfer_state = 176
+		transfer_state = 177
+		transfer_state = 178
+		transfer_state = 179
+		transfer_state = 180
+		transfer_state = 181
+		transfer_state = 182
+		transfer_state = 183
+		transfer_state = 184
+		transfer_state = 185
+		transfer_state = 186
+		transfer_state = 187
+		transfer_state = 188
+		transfer_state = 189
+		transfer_state = 190
+		transfer_state = 191
+		transfer_state = 192
+		transfer_state = 193
+		transfer_state = 194
+		transfer_state = 195
+		transfer_state = 196
+		transfer_state = 197
+		transfer_state = 198
+		transfer_state = 199
+		transfer_state = 200
+		transfer_state = 201
+		transfer_state = 202
+		transfer_state = 203
+		transfer_state = 204
+		transfer_state = 205
+		transfer_state = 206
+		transfer_state = 207
+		transfer_state = 208
+		transfer_state = 209
+		transfer_state = 210
+		transfer_state = 211
+		transfer_state = 212
+		transfer_state = 213
+		transfer_state = 214
+		transfer_state = 215
+		transfer_state = 216
+		transfer_state = 217
+		transfer_state = 218
+		transfer_state = 219
+		transfer_state = 220
+		transfer_state = 221
+		transfer_state = 222
+		transfer_state = 223
+		transfer_state = 224
+		transfer_state = 225
+		transfer_state = 226
+		transfer_state = 227
+		transfer_state = 228
+		transfer_state = 229
+		transfer_state = 230
+		transfer_state = 231
+		transfer_state = 232
+		transfer_state = 233
+		transfer_state = 234
+		transfer_state = 235
+		transfer_state = 236
+		transfer_state = 237
+		transfer_state = 238
+		transfer_state = 239
+		transfer_state = 240
+		transfer_state = 241
+		transfer_state = 242
+		transfer_state = 243
+		transfer_state = 244
+		transfer_state = 245
+		transfer_state = 246
+		transfer_state = 247
+		transfer_state = 248
+		transfer_state = 249
+		transfer_state = 250
+		transfer_state = 251
+		transfer_state = 252
+		transfer_state = 253
+		transfer_state = 254
+		transfer_state = 255
+		transfer_state = 256
+		transfer_state = 257
+		transfer_state = 258
+		transfer_state = 259
+		transfer_state = 260
+		transfer_state = 261
+		transfer_state = 262
+		transfer_state = 263
+		transfer_state = 264
+		transfer_state = 265
+		transfer_state = 266
+		transfer_state = 267
+		transfer_state = 268
+		transfer_state = 269
+		transfer_state = 270
+		transfer_state = 271
+		transfer_state = 272
+		transfer_state = 273
+		transfer_state = 274
+		transfer_state = 275
+		transfer_state = 276
+		transfer_state = 277
+		transfer_state = 278
+		transfer_state = 279
+		transfer_state = 280
+		if = {
+			limit = { country_exists = BLI }
+			give_guarantee = BLI
+			if = { limit = { is_in_faction = no } create_faction = PCL_peace_union }
+			BLI = { country_event = { id = mortaly_war.13 days = 3 } }
+		}
+	}
+	option = {
+		name = mortaly_war.12.a
+		add_stability = 0.05
+		add_political_power = 50
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = mortaly_war.13
+	title = mortaly_war.13.t
+	desc = mortaly_war.13.d
+	is_triggered_only = yes
+	option = {
+		name = mortaly_war.13.a
+		add_political_power = 50
+		add_stability = 0.03
+		set_country_flag = BLI_treaty_signed
+		if = { limit = { country_exists = PCL NOT = { is_in_faction_with = PCL } } add_to_faction = PCL }
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = mortaly_war.13.b
+		add_political_power = 25
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = {
+	id = mortaly_war.30
+	title = mortaly_war.30.t
+	desc = mortaly_war.30.d
+	is_triggered_only = yes
+	option = {
+		name = mortaly_war.30.a
+		trigger = { country_exists = PCL }
+		PCL = { change_tag_from = CRL }
+		PCL = { country_event = { id = mortaly_war.12 days = 1 } }
+		ai_chance = { factor = 0 }
+	}
+	option = {
+		name = mortaly_war.30.b
+		trigger = { country_exists = BLI }
+		BLI = { change_tag_from = CRL }
+		PCL = { country_event = { id = mortaly_war.12 days = 1 } }
+		ai_chance = { factor = 0 }
+	}
+	option = {
+		name = mortaly_war.30.c
+		PCL = { country_event = { id = mortaly_war.12 days = 1 } }
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = mortaly_war.31
+	title = mortaly_war.31.t
+	desc = mortaly_war.31.d
+	is_triggered_only = yes
+	option = {
+		name = mortaly_war.31.a
+		trigger = { country_exists = CRL }
+		CRL = { change_tag_from = PCL }
+		CRL = { country_event = { id = mortaly_war.11 days = 1 } }
+		ai_chance = { factor = 0 }
+	}
+	option = {
+		name = mortaly_war.31.b
+		trigger = { country_exists = BLI BLI = { NOT = { has_country_flag = BLI_joined_peace_alliance } } }
+		BLI = { change_tag_from = PCL }
+		CRL = { country_event = { id = mortaly_war.11 days = 1 } }
+		ai_chance = { factor = 0 }
+	}
+	option = {
+		name = mortaly_war.31.c
+		CRL = { country_event = { id = mortaly_war.11 days = 1 } }
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = mortaly_war.20
+	hidden = yes
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = { NOT = { has_global_flag = civil_war_ended } NOT = { has_global_flag = civil_war_ending } PCL = { has_capitulated = yes } }
+			set_global_flag = civil_war_ending
+			if = { limit = { PCL = { is_ai = no } } PCL = { country_event = { id = mortaly_war.31 days = 1 } } }
+			if = { limit = { PCL = { is_ai = yes } } country_event = { id = mortaly_war.11 days = 1 } }
+		}
+		else_if = {
+			limit = { NOT = { has_global_flag = civil_war_ended } NOT = { has_global_flag = civil_war_ending } has_capitulated = yes }
+			set_global_flag = civil_war_ending
+			if = { limit = { is_ai = no } country_event = { id = mortaly_war.30 days = 1 } }
+			if = { limit = { is_ai = yes } PCL = { country_event = { id = mortaly_war.12 days = 1 } } }
+		}
+		else_if = {
+			limit = { NOT = { has_global_flag = civil_war_ended } NOT = { has_global_flag = civil_war_ending } }
+			country_event = { id = mortaly_war.20 days = 5 }
+		}
+	}
+}
+

@@ -1,0 +1,17 @@
+state = {
+	id = 609
+	name = "STATE_609"
+	manpower = 4000
+	state_category = rural
+	history = {
+		owner = BLI
+		add_core_of = BLI
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = {
+		609
+	}
+	buildings_max_level_factor = 1.0
+}

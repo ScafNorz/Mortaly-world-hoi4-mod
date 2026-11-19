@@ -1,0 +1,22 @@
+state = {
+	id = 210
+	name = "STATE_210"
+	manpower = 5000
+	state_category = city
+	history = {
+		owner = CRL
+		add_core_of = CRL
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 1
+		}
+		victory_points = {
+			210 5
+		}
+	}
+	provinces = {
+		210
+	}
+	buildings_max_level_factor = 1.0
+}

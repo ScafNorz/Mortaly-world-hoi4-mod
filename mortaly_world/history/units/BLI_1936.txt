@@ -1,0 +1,43 @@
+units = {
+	division_template = {
+		name = "BLI Island Garrison"
+		regiments = {
+			infantry = { x = 0 y = 0 }
+			infantry = { x = 0 y = 1 }
+			infantry = { x = 0 y = 2 }
+			infantry = { x = 1 y = 0 }
+			infantry = { x = 1 y = 1 }
+			infantry = { x = 1 y = 2 }
+		}
+	}
+	units = {
+		division = {
+			name = "1 Island Garrison"
+			location = 610
+			division_template = "BLI Island Garrison"
+			start_experience_factor = 0.2
+			start_equipment_factor = 0.8
+		}
+		division = {
+			name = "2 Island Garrison"
+			location = 611
+			division_template = "BLI Island Garrison"
+			start_experience_factor = 0.2
+			start_equipment_factor = 0.8
+		}
+		division = {
+			name = "3 Island Garrison"
+			location = 613
+			division_template = "BLI Island Garrison"
+			start_experience_factor = 0.2
+			start_equipment_factor = 0.8
+		}
+		division = {
+			name = "4 Island Garrison"
+			location = 616
+			division_template = "BLI Island Garrison"
+			start_experience_factor = 0.2
+			start_equipment_factor = 0.8
+		}
+	}
+}

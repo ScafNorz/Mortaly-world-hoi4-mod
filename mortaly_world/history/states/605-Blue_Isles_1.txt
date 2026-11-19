@@ -1,0 +1,21 @@
+state = {
+	id = 605
+	name = "STATE_605"
+	manpower = 4000
+	state_category = rural
+	history = {
+		owner = BLI
+		add_core_of = BLI
+		buildings = {
+			dockyard = 3
+			605 = {
+				naval_base = 6
+			}
+			infrastructure = 2
+		}
+	}
+	provinces = {
+		605
+	}
+	buildings_max_level_factor = 1.0
+}

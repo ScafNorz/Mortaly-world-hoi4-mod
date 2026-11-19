@@ -1,0 +1,17 @@
+state = {
+	id = 247
+	name = "STATE_247"
+	manpower = 4000
+	state_category = rural
+	history = {
+		owner = CRL
+		add_core_of = CRL
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = {
+		247
+	}
+	buildings_max_level_factor = 1.0
+}

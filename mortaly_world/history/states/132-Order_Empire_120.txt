@@ -1,0 +1,21 @@
+state = {
+	id = 132
+	name = "STATE_132"
+	manpower = 6000
+	state_category = rural
+	history = {
+		owner = ORD
+		add_core_of = ORD
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		victory_points = {
+			132 1
+		}
+	}
+	provinces = {
+		132
+	}
+	buildings_max_level_factor = 1.0
+}

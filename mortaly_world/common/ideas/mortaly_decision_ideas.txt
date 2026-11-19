@@ -1,0 +1,72 @@
+ideas = {
+	country = {
+		CRL_enterprise_audit = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.04
+			}
+		}
+		CRL_mines_running = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.06
+			}
+		}
+		CRL_workshops_output = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.15
+			}
+		}
+		CRL_rationing = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.10
+				stability_factor = -0.05
+			}
+		}
+		CRL_army_orders = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = -0.05
+				production_speed_industrial_complex_factor = -0.10
+			}
+		}
+		CRL_officer_checks = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				army_morale_factor = 0.05
+				stability_factor = -0.03
+			}
+		}
+		PCL_field_hospitals_idea = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				land_reinforce_rate = 0.10
+				army_morale_factor = 0.05
+			}
+		}
+		PCL_rail_hub = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				land_reinforce_rate = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+		BLI_convoy_effort = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.05
+			}
+		}
+	}
+}

@@ -1,0 +1,21 @@
+state = {
+	id = 580
+	name = "STATE_580"
+	manpower = 2000
+	state_category = rural
+	history = {
+		owner = VMP
+		add_core_of = VMP
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		victory_points = {
+			580 1
+		}
+	}
+	provinces = {
+		580
+	}
+	buildings_max_level_factor = 1.0
+}

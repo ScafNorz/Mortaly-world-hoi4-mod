@@ -1,0 +1,17 @@
+state = {
+	id = 432
+	name = "STATE_432"
+	manpower = 4000
+	state_category = rural
+	history = {
+		owner = YOZ
+		add_core_of = YOZ
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = {
+		432
+	}
+	buildings_max_level_factor = 1.0
+}

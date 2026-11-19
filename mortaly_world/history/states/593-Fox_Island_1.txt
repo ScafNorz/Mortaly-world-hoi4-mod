@@ -1,0 +1,17 @@
+state = {
+	id = 593
+	name = "STATE_593"
+	manpower = 9000
+	state_category = rural
+	history = {
+		owner = FOX
+		add_core_of = FOX
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = {
+		593
+	}
+	buildings_max_level_factor = 1.0
+}

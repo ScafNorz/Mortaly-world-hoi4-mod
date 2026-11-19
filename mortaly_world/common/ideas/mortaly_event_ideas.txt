@@ -1,0 +1,32 @@
+ideas = {
+	country = {
+		CRL_treasury_industry = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.05
+			}
+		}
+		CRL_treasury_army = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = -0.05
+			}
+		}
+		CRL_strike_concessions = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = -0.04
+			}
+		}
+		CRL_last_order_defence = {
+			allowed = { always = no }
+			removal_cost = -1
+			modifier = {
+				army_defence_factor = 0.10
+			}
+		}
+	}
+}

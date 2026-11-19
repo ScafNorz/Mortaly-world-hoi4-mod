@@ -1,0 +1,22 @@
+state = {
+	id = 538
+	name = "STATE_538"
+	manpower = 2000
+	state_category = city
+	history = {
+		owner = VMP
+		add_core_of = VMP
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 1
+		}
+		victory_points = {
+			538 5
+		}
+	}
+	provinces = {
+		538
+	}
+	buildings_max_level_factor = 1.0
+}
